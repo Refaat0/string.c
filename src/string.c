@@ -28,13 +28,13 @@ int string_compare(const char *string_a, const char *string_b) {
 }
 
 char *string_copy(char *destination, const char *source) {
-    char *p = destination;
+    char *p_destination_start = destination;
 
     while (*destination != '\0') {
         *destination++ = *source++;
     }
 
-    return p;
+    return p_destination_start;
 }
 
 size_t string_length(const char *string) {
@@ -46,10 +46,24 @@ size_t string_length(const char *string) {
     return length;
 }
 
-void string_split(char *string, char *delimiter) {
+char **string_split(char *string, char *delimiter) {
+    return NULL;
 }
 
 char *string_splice(char *destination, const char *source, int starting_index, int ending_index) {
+    char *p = destination;
+
+    for (size_t i = 0; i < starting_index; i++) {
+        source++;
+    }
+
+    for (size_t j = starting_index; j < ending_index; j++) {
+        *destination++ = *source++;
+    }
+
+    *destination = '\0';
+
+    return p;
 }
 
 char string_char_at(const char *string, const int index) {
@@ -63,23 +77,78 @@ char string_char_at(const char *string, const int index) {
 void string_unic_at(const char *string, const int index) {
 }
 
-bool string_contains(const char *needle, const char *haystack) {
+bool string_contains(char *haystack, char *needle) {
+    char *p1, *p2;
+
+    while (*haystack != '\0') {
+        if (*haystack == *needle) {
+            p1 = haystack;
+            p2 = needle;
+
+            while (*p1 && *p2) {
+                if (*p1 != *p2) {
+                    break;
+                }
+
+                p1++;
+                p2++;
+            }
+
+            if (*p2 == '\0') {
+                return true;
+            }
+        }
+
+        haystack++;
+    }
+
+    return false;
 }
 
-void string_starts_with(const char *string, const char *prefix) {
+bool string_starts_with(const char *string, const char *prefix) {
+    while (*prefix != '\0') {
+        if (*prefix != *string) {
+            return false;
+        }
+        string++;
+        prefix++;
+    }
+    return true;
 }
 
-void string_ends_with(const char *string, const char *suffix) {
+bool string_ends_with(const char *string, const char *suffix) {
+
+    while (*string != '\0') {
+        string++;
+    }
+    string--;
+
+    while (*suffix != '\0') {
+        suffix++;
+    }
+    suffix--;
+
+    while (*suffix != '\0') {
+        if (*suffix != *string) {
+            return false;
+        }
+        string--;
+        suffix--;
+    }
+    return true;
 }
 
-void string_hash() {
+char *string_hash() {
+    return false;
 }
 
-void string_to_upper() {
+char *string_to_upper(char *string) {
 }
 
-void string_to_lower() {
+char *string_to_lower() {
+    return false;
 }
 
-void string_capitalize() {
+char *string_capitalize() {
+    return false;
 }

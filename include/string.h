@@ -43,7 +43,7 @@ size_t string_length(const char *string);
  * @param delimiter  a string identifying where the string should be split
  * @return           an array of strings around matches of the delimiter
  */
-void string_split(char *string, char *delimiter);
+char** string_split(char *string, char *delimiter);
 
 /**
  * this function returns a substring of a string based off the starting & ending indexes
@@ -77,7 +77,7 @@ void string_unic_at(const char *string, const int index);
  * @param haystack a pointer to another character array or string literal
  * @return         o boolean of true if the string pointed to by needle is found in the string pointed to by haystack
  */
-bool string_contains(const char *needle, const char *haystack);
+bool string_contains( char *needle,  char *haystack);
 
 /**
  * this function checks if the string pointed to by prefix is contained at the start of a string
@@ -85,7 +85,7 @@ bool string_contains(const char *needle, const char *haystack);
  * @param prefix a pointer to another character array or string litera
  * @return       a boolean of true if the string pointed to by prefix is found at the start of a string
  */
-void string_starts_with(const char *string, const char *prefix);
+bool string_starts_with(const char *string, const char *prefix);
 
 /**
  * this function checks if the string pointed to by prefix is contained at the end of a string
@@ -93,34 +93,34 @@ void string_starts_with(const char *string, const char *prefix);
  * @param suffix a pointer to another character array or string litera
  * @return       a boolean of true if the string pointed to by suffix is found at the end of a string
  */
-void string_ends_with(const char *string, const char *suffix);
+bool string_ends_with(const char *string, const char *suffix);
 
 /**
  * this function hashes a string using the ___ algorithm
  * @param string a pointer to a character array or string literal
  * @return       a pointer to the hashed string
  */
-void string_hash();
+char *string_hash();
 
 /**
  * this function converts a string to uppercase
  * @param string a pointer to a character array or string literal
  * @return       a pointer to string
  */
-void string_to_upper();
+char *string_to_upper(char *string);
 
 /**
  * this function converts a string to lowercase
  * @param string a pointer to a character array or string literal
  * @return       a pointer to string
  */
-void string_to_lower();
+char *string_to_lower();
 
 /**
  * this function converts the first character in a string to uppercase & every character afterwards to lowercase
  * @param stringa pointer to a character array or string literal...
  * @return        a pointer to string
  */
-void string_capitalize();
+char *string_capitalize();
 
 #endif
