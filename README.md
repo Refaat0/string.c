@@ -1,4 +1,4 @@
-# string.h
+# string.c
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
 string.h is a simple library for manipulating static strings in c.
