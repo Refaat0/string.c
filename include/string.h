@@ -80,13 +80,6 @@ bool string_starts_with(const char *string, const char *prefix);
 bool string_ends_with(const char *string, const char *suffix);
 
 /**
- * this function hashes a string using the ___ algorithm
- * @param string a pointer to a character array or string literal
- * @return       a pointer to the hashed string
- */
-char *string_hash();
-
-/**
  * this function converts a string to uppercase
  * @param string a pointer to a character array
  * @return       a pointer to string
@@ -99,12 +92,5 @@ char *string_to_upper(char *string);
  * @return       a pointer to string
  */
 char *string_to_lower(char *string);
-
-/**
- * this function converts the first character in a string to uppercase & every character afterwards to lowercase
- * @param string pointer to a character array
- * @return        a pointer to string
- */
-char *string_capitalize(char *string);
 
 #endif

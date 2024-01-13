@@ -130,10 +130,6 @@ bool string_ends_with(const char *string, const char *suffix) {
     return true;
 }
 
-char *string_hash() {
-    return false;
-}
-
 char *string_to_upper(char *string) {
     char *p_string_start = string;
 
@@ -162,7 +158,3 @@ char *string_to_lower(char *string) {
     return p_string_start;
 }
 
-char *string_capitalize(char *string) {
-    
-    return "nya";
-}
