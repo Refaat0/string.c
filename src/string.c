@@ -46,10 +46,6 @@ size_t string_length(const char *string) {
     return length;
 }
 
-char **string_split(char *string, char *delimiter) {
-    return NULL;
-}
-
 char *string_splice(char *destination, const char *source, int starting_index, int ending_index) {
     char *p = destination;
 
@@ -72,9 +68,6 @@ char string_char_at(const char *string, const int index) {
     }
 
     return string[index];
-}
-
-void string_unic_at(const char *string, const int index) {
 }
 
 bool string_contains(char *haystack, char *needle) {
@@ -117,7 +110,6 @@ bool string_starts_with(const char *string, const char *prefix) {
 }
 
 bool string_ends_with(const char *string, const char *suffix) {
-
     while (*string != '\0') {
         string++;
     }
@@ -143,12 +135,34 @@ char *string_hash() {
 }
 
 char *string_to_upper(char *string) {
+    char *p_string_start = string;
+
+    while (*string != '\0') {
+        if (*string >= 'a' && *string <= 'z') {
+            *string -= 32;
+        }
+        string++;
+    }
+
+    *string = '\0';
+    return p_string_start;
 }
 
-char *string_to_lower() {
-    return false;
+char *string_to_lower(char *string) {
+    char *p_string_start = string;
+
+    while (*string != '\0') {
+        if (*string >= 'A' && *string <= 'Z') {
+            *string += 32;
+        }
+        string++;
+    }
+
+    *string = '\0';
+    return p_string_start;
 }
 
-char *string_capitalize() {
-    return false;
+char *string_capitalize(char *string) {
+    
+    return "nya";
 }
