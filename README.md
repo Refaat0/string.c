@@ -1,24 +1,36 @@
 # string.c
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
-string.h is a simple library for manipulating static strings in c.
+string.c is a simple library for manipulating static strings in c.
 
 ## Getting Started
 These instructions will get a local copy of the library running on your machine!
 
 ### Prerequisites 
+You **must** have a c compiler installed on your machine. I'm using gcc!
+
 ### Installing 
+Clone the repository into a directory
+```
+C:\Users\Refaat\Desktop\sstring> git clone https://github.com/Refaat0/string.c
+```
 
-## API
+Ensure the library is working my compiling it (I still have not learnt make files)
+```
+C:\Users\Refaat\Desktop\sstring> gcc ./src/main.c ./src/string.c
+```
 
-### string_concat()
-### string_compare()
-### string_copy()
-### stirng_length()
-### string_splice()
-### string_char_at()
-### string_contains()
-### string_starts_with()
-### string_ends_with()
-### string_to_lower()
-### string_to_upper()
+### Example
+```c
+int fn(char *string_a, char *string_b) {
+  int silly_integer = 0;
+
+  while (*string_a++ && *string_b++) {
+    token += string_compare(string_a, string_b);
+  }
+
+  return silly_integer;
+} 
+```
+
+
