@@ -15,7 +15,7 @@ Clone the repository into a directory
 C:\Users\Refaat\Desktop\sstring> git clone https://github.com/Refaat0/string.c
 ```
 
-Ensure the library is working my compiling it (I still have not learnt make files)
+Ensure the library is working by compiling it (I still have not learnt make files)
 ```
 C:\Users\Refaat\Desktop\sstring> gcc ./src/main.c ./src/string.c
 ```
@@ -26,7 +26,7 @@ int fn(char *string_a, char *string_b) {
   int silly_integer = 0;
 
   while (*string_a++ && *string_b++) {
-    token += string_compare(string_a, string_b);
+    silly_integer += string_compare(string_a, string_b);
   }
 
   return silly_integer;
